@@ -1,0 +1,27 @@
+{
+  "name": "ujs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "U.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "karma start",
+    "doc": "gulp watch"
+  },
+  "author": "Peng sicheng",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "jasmine-core": "^2.6.4",
+    "karma": "^1.7.0",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-coverage": "^1.1.1",
+    "karma-html-reporter": "^0.2.7",
+    "karma-jasmine": "^1.1.0"
+  },
+  "dependencies": {
+    "gulp-jsdoc3": "^1.0.1"
+  }
+}

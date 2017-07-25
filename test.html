@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>test</title>
+    <style>
+        input[value*=click]{
+            color:red;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <input type="button" value="click">
+    <input type="button" value="cladick-213></click-213>">
+
+    <input type="text" value="name:tom" />
+
+    <!-- <script src="event.js"></script>
+    <script src="type.js"></script>
+    <script src="string.js"></script> -->
+    <script src="U.js"></script>
+
+    <script>
+
+        function callback1(){
+            console.count('debounced');
+        }
+        function callback2(){
+            console.count('not debounced');
+        }
+        window.addEventListener('resize',U.debounce(callback1,300));
+        window.addEventListener('resize',callback2);
+
+        function getFunc(min,max){
+            if(typeof min !== 'number' || typeof max !== 'number') throw new RangeError('min and max should be numbers');
+            if(max <= min) throw new RangeError('min should smaller than max');
+
+            return function(n){
+                console.log(min,max)
+                if(n===null)return [];
+                if(typeof n !== 'number')return [];
+                if(n<min || n >max)return [];
+                var res = [],
+                    del = Math.abs(max - min);
+                // console.log(del,min);
+                for(var i=0;i<n;i++){
+                    // console.log(num);
+                    var num = Math.floor(Math.random()*100) % (del + 1) + min;
+                    var flag = true;
+                    for(var j=0,len=res.length;j<len;j++){
+                        if(res[j]===num){
+                            flag = false;
+                            break;
+                        }
+                    }
+                    if(flag){
+                        res.push(num);
+                    }else{
+                        i--;
+                    }
+                }
+                return res;
+            }
+        }
+
+        var mergeTrees = function(t1, t2) {
+            // function getDepth(t){
+            //     var depth = 0;
+            //     if(t.left===null && t.right===null){
+            //         return depth;
+            //     }
+            //     if(t.left!==null){
+            //         ldepth = getDepth(t.left);
+            //     }else{
+            //         ldepth = 0;
+            //     }
+            //     if(t.right!==null){
+            //         rDepth = getDepth(t.right);
+            //     }else{
+            //         rDepth = 0;
+            //     }
+            //     return Math.max(ldepth,rdepth) + 1;
+            // }
+        };
+
+
+    </script>
+</body>
+
+</html>
